@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Our Portfolio | Website Development Projects India | NextGen Web Solutions</title>
+    <meta name="description" content="View our portfolio of 500+ website development projects across India. See our work for businesses, e-commerce stores, and custom web applications.">
+    <meta name="keywords" content="web development portfolio India, website design projects, ecommerce portfolio, custom web application projects, our work examples">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Web Development Portfolio India | NextGen Web Solutions">
+    <meta property="og:description" content="500+ successful website projects delivered across India. View our portfolio of business websites, e-commerce stores, and custom applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextgenwebsolutions.in/portfolio-india.html">
+    <meta property="og:image" content="https://nextgenwebsolutions.in/assets/images/og-image.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Website Development Portfolio - NextGen Web Solutions">
+    <meta name="twitter:description" content="See our work: 500+ professional websites delivered across India">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nextgenwebsolutions.in/portfolio-india.html">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Web Development Portfolio",
+      "description": "Portfolio of website development projects by NextGen Web Solutions",
+      "numberOfItems": "500",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Manufacturing Company Website - Delhi",
+            "description": "Corporate website with admin panel for manufacturing business"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Fashion E-commerce Store - Mumbai",
+            "description": "Online fashion store with Razorpay integration"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "SaaS Admin Dashboard - Bangalore",
+            "description": "Custom admin dashboard with analytics for SaaS startup"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <title>Our Portfolio | Website Development Projects India | NextGen Web Solutions</title>
+    
+    <!-- Three.js Particle Animation Styles -->
+    <style>
+        /* Particle Canvas Container */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* Portfolio Hero with Animation */
+        .portfolio-hero {
+            position: relative;
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%);
+            color: white;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+        
+        .portfolio-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/images/pattern.png');
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .portfolio-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        /* Portfolio Categories */
+        .portfolio-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        /* Portfolio Items with 3D Effect */
+        .portfolio-items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .portfolio-item-card {
+            background: var(--bg-color);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .portfolio-item-card:hover {
+            transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 30px rgba(37, 99, 235, 0.2);
+        }
+        
+        .portfolio-image-container {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item-card:hover .portfolio-image {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.8));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-item-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .view-project {
+            background: white;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item-card:hover .view-project {
+            transform: translateY(0);
+        }
+        
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+        
+        .portfolio-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .portfolio-tag {
+            background: var(--bg-light);
+            color: var(--text-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        /* Project Stats */
+        .project-stats {
+            background: var(--bg-light);
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-color);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stat-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Case Study Section */
+        .case-study {
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-light) 100%);
+            padding: 4rem 0;
+            border-radius: 1rem;
+            margin: 4rem 0;
+        }
+        
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .case-study-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .case-study-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .case-study-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .case-study-features i {
+            color: var(--secondary-color);
+        }
+        
+        /* Client Testimonials */
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+            margin: 3rem 0;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-card {
+            min-width: 350px;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .client-rating {
+            color: #fbbf24;
+            margin: 0.5rem 0;
+        }
+        
+        /* CTA Section */
+        .portfolio-cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            border-radius: 1rem;
+            margin: 4rem 0;
+        }
+        
+        .portfolio-cta h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        /* Loading Animation */
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portfolio-hero {
+                padding: 6rem 0 3rem;
+            }
+            
+            .portfolio-items-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-categories {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .testimonial-card {
+                min-width: 100%;
+            }
+            
+            .stat-item {
+                padding: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .portfolio-image-container {
+                height: 200px;
+            }
+            
+            .case-study-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="loading">
+    <!-- Three.js Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919599372553?text=Hi%20NextGen,%20I%20saw%20your%20portfolio%20and%20want%20a%20similar%20website" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener nofollow"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>NextGen Web Solutions</h1>
+                        <span class="logo-subtitle">Professional Website Development</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services-india.html" class="nav-link">Services</a>
+                    <a href="index.html#pricing" class="nav-link">Pricing</a>
+                    <a href="portfolio-india.html" class="nav-link active">Portfolio</a>
+                    <a href="about-india.html" class="nav-link">About</a>
+                    <a href="contact-india.html" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div class="portfolio-hero-content">
+                <div class="hero-badge">
+                    <span>500+ Projects Delivered</span>
+                </div>
+                <h1 class="hero-title">Our Website Development Portfolio</h1>
+                <p class="hero-subtitle">
+                    Showcasing our best work for businesses across India. From simple business websites 
+                    to complex e-commerce platforms and custom web applications.
+                </p>
+                
+                <div class="portfolio-categories">
+                    <button class="category-btn active" data-category="all">All Projects</button>
+                    <button class="category-btn" data-category="business">Business Websites</button>
+                    <button class="category-btn" data-category="ecommerce">E-commerce</button>
+                    <button class="category-btn" data-category="custom">Custom Applications</button>
+                    <button class="category-btn" data-category="redesign">Website Redesign</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Projects -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A selection of our best work across different industries</p>
+        </div>
+        
+        <div class="loading-spinner" id="portfolioLoading">
+            <div class="spinner"></div>
+            <p>Loading projects...</p>
+        </div>
+        
+        <div class="portfolio-items-grid" id="portfolioGrid">
+            <!-- Projects will be loaded dynamically -->
+        </div>
+        
+        <div class="text-center" style="margin-top: 3rem;">
+            <button class="btn btn-primary" id="loadMoreBtn">
+                <i class="fas fa-sync-alt"></i> Load More Projects
+            </button>
+        </div>
+    </section>
+
+    <!-- Project Statistics -->
+    <section class="project-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Statistics</h2>
+                <p class="section-subtitle">Numbers that showcase our expertise and reliability</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">7 Days</div>
+                    <div class="stat-label">Average Delivery Time</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <div class="stat-number">₹4.5Cr+</div>
+                    <div class="stat-label">Client Revenue Generated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case Study -->
+    <section class="case-study container">
+        <div class="case-study-grid">
+            <div class="case-study-content">
+                <h3>Featured Case Study: Fashion E-commerce Platform</h3>
+                <p>
+                    We built a complete e-commerce solution for a fashion brand in Mumbai, 
+                    resulting in a 300% increase in online sales within 3 months.
+                </p>
+                
+                <ul class="case-study-features">
+                    <li><i class="fas fa-check"></i> <strong>Challenge:</strong> Low conversion rate, slow loading times</li>
+                    <li><i class="fas fa-check"></i> <strong>Solution:</strong> Custom e-commerce platform with advanced features</li>
+                    <li><i class="fas fa-check"></i> <strong>Results:</strong> 300% sales increase, 40% faster loading</li>
+                </ul>
+                
+                <div class="hero-cta">
+                    <a href="contact-india.html" class="btn btn-primary">
+                        <i class="fas fa-file-alt"></i> View Full Case Study
+                    </a>
+                    <a href="https://wa.me/919599372553" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> Discuss Similar Project
+                    </a>
+                </div>
+            </div>
+            
+            <div class="case-study-stats">
+                <div class="stat-item">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">Sales Increase</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Faster Loading</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Mobile Traffic</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">Client Testimonials</h2>
+            <p class="section-subtitle">What our clients say about our work</p>
+        </div>
+        
+        <div class="testimonial-slider">
+            <div class="testimonial-track" id="testimonialTrack">
+                <div class="testimonial-card">
+                    <div class="client-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p>"NextGen built our corporate website in record time. The team was professional, responsive, and delivered exactly what we needed."</p>
+                    <div class="client-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="client-name">Rajesh Kumar</div>
+                    <div class="client-company">Manufacturing Company, Delhi</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="client-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p>"Our e-commerce store has seen tremendous growth since NextGen rebuilt it. The payment integration works flawlessly."</p>
+                    <div class="client-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="client-name">Priya Sharma</div>
+                    <div class="client-company">Fashion Boutique, Mumbai</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="client-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p>"The custom admin dashboard they built has streamlined our operations. Great work and excellent support!"</p>
+                    <div class="client-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="client-name">Amit Verma</div>
+                    <div class="client-company">SaaS Startup, Bangalore</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">Industries We Serve</h2>
+            <p class="section-subtitle">Expert website solutions for various industries across India</p>
+        </div>
+        
+        <div class="industry-grid">
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>E-commerce & Retail</h3>
+                <p>Online stores, marketplaces, and retail websites with secure payment gateways.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education</h3>
+                <p>School, college, and coaching websites with student portals and LMS.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Healthcare</h3>
+                <p>Hospital websites, appointment systems, and telemedicine platforms.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Real Estate</h3>
+                <p>Property listing websites with virtual tours and CRM integration.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Restaurant & Food</h3>
+                <p>Food ordering systems, restaurant websites, and delivery management.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Manufacturing</h3>
+                <p>Corporate websites, product catalogs, and dealer networks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's create something amazing together. Share your requirements and get a free quote.</p>
+            <div class="hero-cta">
+                <a href="contact-india.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-file-alt"></i> Get Free Quote
+                </a>
+                <a href="https://wa.me/919599372553" class="btn btn-secondary btn-large">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>NextGen Web Solutions</h3>
+                        <p>Professional Website Development Services Across India</p>
+                    </div>
+                    <p class="footer-about">
+                        We help businesses across India establish their online presence with professional, 
+                        fast, and secure websites. Serving clients in all major cities with custom solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919599372553" class="social-link whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" class="social-link facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-link twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-link instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services-india.html">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="portfolio-india.html">Portfolio</a></li>
+                        <li><a href="about-india.html">About</a></li>
+                        <li><a href="contact-india.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services-india.html#website">Business Websites</a></li>
+                        <li><a href="services-india.html#ecommerce">E-commerce Solutions</a></li>
+                        <li><a href="services-india.html#custom">Custom Applications</a></li>
+                        <li><a href="services-india.html#maintenance">Website Maintenance</a></li>
+                        <li><a href="services-india.html#seo">SEO Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+919599372553">+91 95993 72553</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:akashsing1553@gmail.com">akashsing1553@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sector 28, Faridabad, Haryana 121008</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sun: 9:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> NextGen Web Solutions. All rights reserved.</p>
+                    <p>Professional Website Development Services for Businesses Across India</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>NextGen Assistant</h3>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <!-- Messages will be added here -->
+            </div>
+            <div class="chatbot-options">
+                <button class="option-btn" data-option="Portfolio">View Portfolio</button>
+                <button class="option-btn" data-option="Pricing">Get Pricing</button>
+                <button class="option-btn" data-option="Contact">Contact Info</button>
+                <button class="whatsapp-redirect" id="whatsappRedirect">
+                    <i class="fab fa-whatsapp"></i> Discuss Project
+                </button>
+            </div>
+        </div>
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll contact you within 24 hours.</p>
+            <button class="btn btn-primary" id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Portfolio-specific JavaScript -->
+    <script>
+        // Portfolio Data
+        const portfolioData = [
+            {
+                id: 1,
+                title: "Manufacturing Company Website",
+                description: "Complete corporate website with admin panel for a manufacturing business in Delhi.",
+                category: "business",
+                image: "assets/images/portfolio-1.jpg",
+                tags: ["Corporate", "Admin Panel", "Responsive"],
+                link: "#"
+            },
+            {
+                id: 2,
+                title: "Fashion E-commerce Store",
+                description: "Online fashion store with Razorpay integration and inventory management.",
+                category: "ecommerce",
+                image: "assets/images/portfolio-2.jpg",
+                tags: ["E-commerce", "Payment Gateway", "Inventory"],
+                link: "#"
+            },
+            {
+                id: 3,
+                title: "SaaS Admin Dashboard",
+                description: "Custom admin dashboard with analytics for a SaaS startup in Bangalore.",
+                category: "custom",
+                image: "assets/images/portfolio-3.jpg",
+                tags: ["Dashboard", "Analytics", "SaaS"],
+                link: "#"
+            },
+            {
+                id: 4,
+                title: "Restaurant Website & Ordering",
+                description: "Food ordering system with real-time updates for a restaurant chain.",
+                category: "custom",
+                image: "assets/images/portfolio-4.jpg",
+                tags: ["Food Ordering", "Real-time", "Mobile App"],
+                link: "#"
+            },
+            {
+                id: 5,
+                title: "School Management System",
+                description: "Complete school website with student portal and parent login.",
+                category: "business",
+                image: "assets/images/portfolio-5.jpg",
+                tags: ["Education", "Portal", "Management"],
+                link: "#"
+            },
+            {
+                id: 6,
+                title: "Real Estate Listing Platform",
+                description: "Property listing website with virtual tours and CRM integration.",
+                category: "custom",
+                image: "assets/images/portfolio-6.jpg",
+                tags: ["Real Estate", "Virtual Tour", "CRM"],
+                link: "#"
+            },
+            {
+                id: 7,
+                title: "Healthcare Website Redesign",
+                description: "Modern redesign of hospital website with appointment booking system.",
+                category: "redesign",
+                image: "assets/images/portfolio-7.jpg",
+                tags: ["Healthcare", "Redesign", "Booking"],
+                link: "#"
+            },
+            {
+                id: 8,
+                title: "Travel Agency Portal",
+                description: "Complete travel booking platform with multiple payment options.",
+                category: "ecommerce",
+                image: "assets/images/portfolio-8.jpg",
+                tags: ["Travel", "Booking", "Multi-payment"],
+                link: "#"
+            }
+        ];
+
+        // Portfolio Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const portfolioGrid = document.getElementById('portfolioGrid');
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const portfolioLoading = document.getElementById('portfolioLoading');
+            
+            let currentCategory = 'all';
+            let visibleCount = 6;
+            
+            // Initialize Three.js Particle Animation
+            initParticleAnimation();
+            
+            // Load initial projects
+            loadProjects();
+            
+            // Category filter functionality
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update category and reload projects
+                    currentCategory = this.dataset.category;
+                    visibleCount = 6;
+                    loadProjects();
+                });
+            });
+            
+            // Load more projects
+            loadMoreBtn.addEventListener('click', function() {
+                visibleCount += 3;
+                loadProjects();
+                
+                // Disable button if all projects are visible
+                const filteredProjects = getFilteredProjects();
+                if (visibleCount >= filteredProjects.length) {
+                    this.disabled = true;
+                    this.innerHTML = '<i class="fas fa-check"></i> All Projects Loaded';
+                }
+            });
+            
+            // Testimonial slider
+            initTestimonialSlider();
+            
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Mark body as loaded
+            window.addEventListener('load', function() {
+                document.body.classList.remove('loading');
+                document.body.classList.add('loaded');
+            });
+            
+            function loadProjects() {
+                portfolioGrid.innerHTML = '';
+                portfolioLoading.style.display = 'block';
+                
+                setTimeout(() => {
+                    const filteredProjects = getFilteredProjects();
+                    const projectsToShow = filteredProjects.slice(0, visibleCount);
+                    
+                    projectsToShow.forEach(project => {
+                        const projectCard = createProjectCard(project);
+                        portfolioGrid.appendChild(projectCard);
+                    });
+                    
+                    portfolioLoading.style.display = 'none';
+                    
+                    // Update load more button state
+                    loadMoreBtn.disabled = visibleCount >= filteredProjects.length;
+                    if (visibleCount >= filteredProjects.length) {
+                        loadMoreBtn.innerHTML = '<i class="fas fa-check"></i> All Projects Loaded';
+                    }
+                }, 500);
+            }
+            
+            function getFilteredProjects() {
+                if (currentCategory === 'all') {
+                    return portfolioData;
+                }
+                return portfolioData.filter(project => project.category === currentCategory);
+            }
+            
+            function createProjectCard(project) {
+                const card = document.createElement('div');
+                card.className = 'portfolio-item-card';
+                card.dataset.category = project.category;
+                
+                card.innerHTML = `
+                    <div class="portfolio-image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="${project.link}" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <div class="portfolio-tags">
+                            ${project.tags.map(tag => `<span class="portfolio-tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                return card;
+            }
+            
+            function initTestimonialSlider() {
+                const track = document.getElementById('testimonialTrack');
+                const cards = track.querySelectorAll('.testimonial-card');
+                
+                let currentIndex = 0;
+                const cardWidth = cards[0].offsetWidth + 32; // width + gap
+                
+                function slideNext() {
+                    currentIndex = (currentIndex + 1) % cards.length;
+                    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                }
+                
+                // Auto slide every 5 seconds
+                setInterval(slideNext, 5000);
+                
+                // Pause on hover
+                track.addEventListener('mouseenter', () => {
+                    clearInterval(slideInterval);
+                });
+                
+                track.addEventListener('mouseleave', () => {
+                    slideInterval = setInterval(slideNext, 5000);
+                });
+                
+                let slideInterval = setInterval(slideNext, 5000);
+            }
+        });
+        
+        // Three.js Particle Animation
+        function initParticleAnimation() {
+            // Check if Three.js is loaded
+            if (typeof THREE === 'undefined') {
+                console.warn('Three.js not loaded, skipping particle animation');
+                return;
+            }
+            
+            // Create scene
+            const scene = new THREE.Scene();
+            
+            // Create camera
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 30;
+            
+            // Create renderer
+            const renderer = new THREE.WebGLRenderer({
+                canvas: document.getElementById('particle-canvas'),
+                alpha: true,
+                antialias: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 1500;
+            
+            const posArray = new Float32Array(particlesCount * 3);
+            const colorsArray = new Float32Array(particlesCount * 3);
+            
+            // Colors for particles
+            const colors = [
+                new THREE.Color(0x2563eb), // Blue
+                new THREE.Color(0x8b5cf6), // Purple
+                new THREE.Color(0x10b981), // Green
+                new THREE.Color(0xf59e0b)  // Amber
+            ];
+            
+            for (let i = 0; i < particlesCount * 3; i += 3) {
+                // Position
+                posArray[i] = (Math.random() - 0.5) * 100;
+                posArray[i + 1] = (Math.random() - 0.5) * 100;
+                posArray[i + 2] = (Math.random() - 0.5) * 100;
+                
+                // Color
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                colorsArray[i] = color.r;
+                colorsArray[i + 1] = color.g;
+                colorsArray[i + 2] = color.b;
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorsArray, 3));
+            
+            // Create material
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.1,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.6,
+                blending: THREE.AdditiveBlending
+            });
+            
+            // Create mesh
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            // Add lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+            
+            const pointLight = new THREE.PointLight(0xffffff, 1);
+            pointLight.position.set(25, 25, 25);
+            scene.add(pointLight);
+            
+            // Mouse interaction
+            let mouseX = 0;
+            let mouseY = 0;
+            
+            document.addEventListener('mousemove', (event) => {
+                mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            });
+            
+            // Animation loop
+            let time = 0;
+            
+            function animate() {
+                requestAnimationFrame(animate);
+                time += 0.001;
+                
+                // Rotate particles
+                particlesMesh.rotation.x = time * 0.2;
+                particlesMesh.rotation.y = time * 0.3;
+                
+                // Mouse interaction
+                particlesMesh.rotation.y += mouseX * 0.005;
+                particlesMesh.rotation.x += mouseY * 0.005;
+                
+                // Pulsing effect
+                particlesMaterial.size = 0.1 + Math.sin(time * 2) * 0.05;
+                
+                // Move camera slightly
+                camera.position.x = Math.sin(time * 0.3) * 5;
+                camera.position.y = Math.cos(time * 0.2) * 3;
+                
+                renderer.render(scene, camera);
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Start animation
+            animate();
+            
+            // Performance optimization for mobile
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                particlesMaterial.size = 0.05;
+                particlesMaterial.opacity = 0.3;
+            }
+        }
+    </script>
+</body>
+</html>

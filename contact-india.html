@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Contact Us | Website Development Company India | NextGen Web Solutions</title>
+    <meta name="description" content="Contact NextGen Web Solutions for website development services across India. Get free consultation and quote for your project.">
+    <meta name="keywords" content="contact web developer India, website development quote, free consultation, web design services contact, India web development company">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | Website Development Company India">
+    <meta property="og:description" content="Get in touch for professional website development services. Free consultation and quote for your project.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextgenwebsolutions.in/contact-india.html">
+    <meta property="og:image" content="https://nextgenwebsolutions.in/assets/images/og-image.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact NextGen Web Solutions - Website Development Experts">
+    <meta name="twitter:description" content="Get free consultation and quote for your website project">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nextgenwebsolutions.in/contact-india.html">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact NextGen Web Solutions",
+      "description": "Contact page for website development services",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+919599372553",
+        "contactType": "customer service",
+        "email": "akashsing1553@gmail.com",
+        "areaServed": "IN",
+        "availableLanguage": ["en", "hi"]
+      }
+    }
+    </script>
+    
+    <title>Contact Us | Website Development Company India | NextGen Web Solutions</title>
+    
+    <!-- Three.js Particle Animation Styles -->
+    <style>
+        /* Particle Canvas Container */
+        #contact-particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* Contact Hero */
+        .contact-hero {
+            position: relative;
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.9) 0%, rgba(37, 99, 235, 0.9) 100%);
+            color: white;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+        
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/images/pattern.png');
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .contact-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Methods Grid */
+        .contact-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .contact-method-card {
+            background: var(--bg-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        .contact-method-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 
+                0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .contact-method-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-method-card:hover .contact-method-icon {
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .contact-method-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .contact-method-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .response-time {
+            display: inline-block;
+            background: var(--bg-light);
+            color: var(--text-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Contact Form with 3D Effect */
+        .contact-form-wrapper {
+            background: var(--bg-color);
+            border-radius: 1rem;
+            padding: 3rem;
+            box-shadow: 
+                0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-form-wrapper:hover {
+            transform: rotateX(1deg) rotateY(1deg);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-header h2 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-header p {
+            color: var(--text-light);
+        }
+        
+        /* Form Improvements */
+        .form-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            position: absolute;
+            left: 1rem;
+            top: 0.75rem;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            background: var(--bg-color);
+            padding: 0 0.5rem;
+        }
+        
+        input:focus + .form-label,
+        input:not(:placeholder-shown) + .form-label,
+        select:focus + .form-label,
+        select:not([value=""]) + .form-label,
+        textarea:focus + .form-label,
+        textarea:not(:placeholder-shown) + .form-label {
+            top: -0.5rem;
+            left: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--primary-color);
+        }
+        
+        /* Office Location */
+        .office-location {
+            background: var(--bg-light);
+            border-radius: 1rem;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .location-info h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .location-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .location-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .location-features i {
+            color: var(--secondary-color);
+        }
+        
+        .map-placeholder {
+            height: 300px;
+            background: var(--bg-color);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            border: 2px dashed var(--border-color);
+        }
+        
+        /* FAQ Section */
+        .contact-faq {
+            margin: 4rem 0;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .faq-item {
+            background: var(--bg-light);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .faq-question i {
+            color: var(--primary-color);
+        }
+        
+        /* Social Media Links */
+        .social-contact {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .social-links-large {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link-large {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .social-link-large:hover {
+            transform: translateY(-5px);
+            color: white;
+        }
+        
+        .social-link-large.whatsapp:hover {
+            background: #25D366;
+        }
+        
+        .social-link-large.facebook:hover {
+            background: #1877F2;
+        }
+        
+        .social-link-large.twitter:hover {
+            background: #1DA1F2;
+        }
+        
+        .social-link-large.linkedin:hover {
+            background: #0A66C2;
+        }
+        
+        .social-link-large.instagram:hover {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+        
+        /* Business Hours */
+        .business-hours {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .business-hours h3 {
+            color: white;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .hour-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: var(--secondary-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin: 2rem 0;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 6rem 0 3rem;
+            }
+            
+            .contact-methods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-wrapper {
+                padding: 2rem;
+            }
+            
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .business-hours {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-form-wrapper {
+                padding: 1.5rem;
+            }
+            
+            .contact-method-card {
+                padding: 1.5rem;
+            }
+            
+            .office-location {
+                padding: 2rem;
+            }
+            
+            .social-links-large {
+                gap: 0.5rem;
+            }
+            
+            .social-link-large {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="loading">
+    <!-- Three.js Particle Canvas -->
+    <canvas id="contact-particle-canvas"></canvas>
+    
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919599372553?text=Hi%20NextGen,%20I%20want%20to%20discuss%20a%20website%20project" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener nofollow"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>NextGen Web Solutions</h1>
+                        <span class="logo-subtitle">Professional Website Development</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services-india.html" class="nav-link">Services</a>
+                    <a href="index.html#pricing" class="nav-link">Pricing</a>
+                    <a href="portfolio-india.html" class="nav-link">Portfolio</a>
+                    <a href="about-india.html" class="nav-link">About</a>
+                    <a href="contact-india.html" class="nav-link active">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <div class="hero-badge">
+                    <span>24/7 Support Available</span>
+                </div>
+                <h1 class="hero-title">Get In Touch With Us</h1>
+                <p class="hero-subtitle">
+                    Ready to start your website project? Contact us for a free consultation and quote. 
+                    We're available 24/7 to answer your questions and help you get started.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="container">
+        <div class="contact-methods-grid">
+            <div class="contact-method-card">
+                <div class="contact-method-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp Chat</h3>
+                <p>Fastest way to get in touch. We respond within minutes during business hours.</p>
+                <a href="https://wa.me/919599372553" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Chat Now
+                </a>
+                <div class="response-time">Response: Within 5 minutes</div>
+            </div>
+            
+            <div class="contact-method-card">
+                <div class="contact-method-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Phone Call</h3>
+                <p>Speak directly with our team for detailed project discussions.</p>
+                <a href="tel:+919599372553" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <div class="response-time">Available: 9 AM - 9 PM</div>
+            </div>
+            
+            <div class="contact-method-card">
+                <div class="contact-method-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>Send detailed project requirements for comprehensive quotes and proposals.</p>
+                <a href="mailto:akashsing1553@gmail.com" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Send Email
+                </a>
+                <div class="response-time">Response: Within 24 hours</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="container">
+        <div class="contact-form-wrapper">
+            <div class="form-header">
+                <h2>Get a Free Quote</h2>
+                <p>Fill out the form below and we'll get back to you within 24 hours</p>
+            </div>
+            
+            <form id="contactForm" class="quote-form">
+                <div class="form-group">
+                    <input type="text" id="contactName" name="name" placeholder=" " required>
+                    <label for="contactName" class="form-label">Your Name *</label>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="email" id="contactEmail" name="email" placeholder=" " required>
+                        <label for="contactEmail" class="form-label">Email Address *</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="contactPhone" name="phone" placeholder=" " required>
+                        <label for="contactPhone" class="form-label">Phone Number *</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <select id="contactService" name="service" required>
+                        <option value="" selected disabled> </option>
+                        <option value="business-website">Business Website Development</option>
+                        <option value="ecommerce">E-commerce Website</option>
+                        <option value="custom-app">Custom Web Application</option>
+                        <option value="website-redesign">Website Redesign</option>
+                        <option value="maintenance">Website Maintenance</option>
+                        <option value="seo">SEO Services</option>
+                        <option value="other">Other Services</option>
+                    </select>
+                    <label for="contactService" class="form-label">Service Needed *</label>
+                </div>
+                
+                <div class="form-group">
+                    <select id="contactBudget" name="budget">
+                        <option value="" selected disabled> </option>
+                        <option value="5k-10k">₹5,000 - ₹10,000</option>
+                        <option value="10k-25k">₹10,000 - ₹25,000</option>
+                        <option value="25k-50k">₹25,000 - ₹50,000</option>
+                        <option value="50k-plus">₹50,000+</option>
+                        <option value="not-sure">Not Sure / Need Quote</option>
+                    </select>
+                    <label for="contactBudget" class="form-label">Estimated Budget</label>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="contactMessage" name="message" rows="5" placeholder=" " required></textarea>
+                    <label for="contactMessage" class="form-label">Project Details *</label>
+                </div>
+                
+                <!-- Honeypot field -->
+                <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                
+                <div class="form-group">
+                    <div class="form-check">
+                        <input type="checkbox" id="privacyPolicy" name="privacy" required>
+                        <label for="privacyPolicy">
+                            I agree to the <a href="privacy.html">Privacy Policy</a> and 
+                            <a href="terms.html">Terms of Service</a> *
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-submit">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                <h3>Message Sent Successfully!</h3>
+                <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Location -->
+    <section class="office-location">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info">
+                    <h3>Our Office Location</h3>
+                    <p>Based in Faridabad, Haryana, we serve clients across India through remote collaboration and on-site visits for Delhi NCR clients.</p>
+                    
+                    <ul class="location-features">
+                        <li><i class="fas fa-check"></i> <strong>Address:</strong> Sector 28, Faridabad, Haryana 121008</li>
+                        <li><i class="fas fa-check"></i> <strong>Email:</strong> akashsing1553@gmail.com</li>
+                        <li><i class="fas fa-check"></i> <strong>Phone:</strong> +91 95993 72553</li>
+                        <li><i class="fas fa-check"></i> <strong>Site Visits:</strong> Available for Delhi NCR clients</li>
+                        <li><i class="fas fa-check"></i> <strong>Remote Support:</strong> Available for clients across India</li>
+                    </ul>
+                    
+                    <div class="hero-cta">
+                        <a href="https://maps.google.com/?q=Sector+28,+Faridabad,+Haryana+121008" 
+                           class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> View on Google Maps
+                        </a>
+                        <a href="tel:+919599372553" class="btn btn-primary">
+                            <i class="fas fa-phone"></i> Call for Directions
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div style="text-align: center;">
+                            <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <p>Sector 28, Faridabad</p>
+                            <p>Haryana 121008, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Hours -->
+    <section class="container">
+        <div class="business-hours">
+            <h3><i class="fas fa-clock"></i> Business Hours</h3>
+            <div class="hours-grid">
+                <div class="hour-item">
+                    <strong>Monday - Friday</strong>
+                    <p>9:00 AM - 9:00 PM</p>
+                </div>
+                <div class="hour-item">
+                    <strong>Saturday</strong>
+                    <p>9:00 AM - 9:00 PM</p>
+                </div>
+                <div class="hour-item">
+                    <strong>Sunday</strong>
+                    <p>9:00 AM - 9:00 PM</p>
+                </div>
+                <div class="hour-item">
+                    <strong>Emergency Support</strong>
+                    <p>24/7 via WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-contact">
+        <div class="container">
+            <h2>Connect With Us</h2>
+            <p>Follow us on social media for updates, tips, and web development insights</p>
+            
+            <div class="social-links-large">
+                <a href="https://wa.me/919599372553" class="social-link-large whatsapp" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com/nextgenwebsolutions" class="social-link-large facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/nextgenwebsols" class="social-link-large twitter" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/company/nextgenwebsolutions" class="social-link-large linkedin" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com/nextgenwebsolutions" class="social-link-large instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="contact-faq container">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Quick answers to common questions about our services</p>
+        </div>
+        
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    How soon will you respond to my inquiry?
+                </div>
+                <p>We respond to WhatsApp messages within 5 minutes during business hours. Emails are answered within 24 hours. Phone calls are answered immediately during business hours.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    Do you offer free consultation?
+                </div>
+                <p>Yes! We offer free 30-minute consultation sessions to understand your requirements and provide initial suggestions. You can schedule one via WhatsApp or phone.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    What information do I need to provide for a quote?
+                </div>
+                <p>Please provide: 1) Your business details, 2) Type of website needed, 3) Number of pages, 4) Special features required, 5) Your timeline, and 6) Budget range if known.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    Do you serve clients outside Delhi NCR?
+                </div>
+                <p>Absolutely! We serve clients across India through remote collaboration. We've successfully delivered projects for clients in Mumbai, Bangalore, Chennai, Hyderabad, Kolkata, and many other cities.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    What are your payment terms?
+                </div>
+                <p>We require 50% advance to start work, 40% upon design approval, and 10% upon project completion. We accept UPI, bank transfer, and online payments.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    Do you provide post-launch support?
+                </div>
+                <p>Yes! All our packages include at least 1 year of free support. We also offer maintenance plans for ongoing support, updates, and security monitoring.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <h2>Let's Build Something Amazing Together</h2>
+            <p>Whether you need a simple business website or a complex web application, we're here to help.</p>
+            <div class="hero-cta">
+                <a href="https://wa.me/919599372553" class="btn btn-primary btn-large">
+                    <i class="fab fa-whatsapp"></i> Start Chat
+                </a>
+                <a href="tel:+919599372553" class="btn btn-secondary btn-large">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>NextGen Web Solutions</h3>
+                        <p>Professional Website Development Services Across India</p>
+                    </div>
+                    <p class="footer-about">
+                        We help businesses across India establish their online presence with professional, 
+                        fast, and secure websites. Serving clients in all major cities with custom solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919599372553" class="social-link whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" class="social-link facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-link twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-link instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services-india.html">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="portfolio-india.html">Portfolio</a></li>
+                        <li><a href="about-india.html">About</a></li>
+                        <li><a href="contact-india.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services-india.html#website">Business Websites</a></li>
+                        <li><a href="services-india.html#ecommerce">E-commerce Solutions</a></li>
+                        <li><a href="services-india.html#custom">Custom Applications</a></li>
+                        <li><a href="services-india.html#maintenance">Website Maintenance</a></li>
+                        <li><a href="services-india.html#seo">SEO Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+919599372553">+91 95993 72553</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:akashsing1553@gmail.com">akashsing1553@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sector 28, Faridabad, Haryana 121008</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sun: 9:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> NextGen Web Solutions. All rights reserved.</p>
+                    <p>Professional Website Development Services for Businesses Across India</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>NextGen Assistant</h3>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <!-- Messages will be added here -->
+            </div>
+            <div class="chatbot-options">
+                <button class="option-btn" data-option="Get Quote">Get Quote</button>
+                <button class="option-btn" data-option="Contact Info">Contact Info</button>
+                <button class="option-btn" data-option="Services">Our Services</button>
+                <button class="whatsapp-redirect" id="whatsappRedirect">
+                    <i class="fab fa-whatsapp"></i> Live Chat
+                </button>
+            </div>
+        </div>
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Contact-specific JavaScript -->
+    <script>
+        // Initialize Three.js Particle Animation
+        function initContactParticleAnimation() {
+            // Check if Three.js is loaded
+            if (typeof THREE === 'undefined') {
+                console.warn('Three.js not loaded, skipping particle animation');
+                return;
+            }
+            
+            // Create scene
+            const scene = new THREE.Scene();
+            
+            // Create camera
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 25;
+            
+            // Create renderer
+            const renderer = new THREE.WebGLRenderer({
+                canvas: document.getElementById('contact-particle-canvas'),
+                alpha: true,
+                antialias: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 2000;
+            
+            const posArray = new Float32Array(particlesCount * 3);
+            const colorsArray = new Float32Array(particlesCount * 3);
+            
+            // Colors for particles (green and blue theme)
+            const colors = [
+                new THREE.Color(0x10b981), // Green
+                new THREE.Color(0x2563eb), // Blue
+                new THREE.Color(0x8b5cf6), // Purple
+                new THREE.Color(0xffffff)  // White
+            ];
+            
+            for (let i = 0; i < particlesCount * 3; i += 3) {
+                // Position in a spherical shape
+                const radius = 15 + Math.random() * 10;
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.random() * Math.PI;
+                
+                posArray[i] = radius * Math.sin(phi) * Math.cos(theta);
+                posArray[i + 1] = radius * Math.sin(phi) * Math.sin(theta);
+                posArray[i + 2] = radius * Math.cos(phi);
+                
+                // Color
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                colorsArray[i] = color.r;
+                colorsArray[i + 1] = color.g;
+                colorsArray[i + 2] = color.b;
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorsArray, 3));
+            
+            // Create material
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.08,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.7,
+                blending: THREE.AdditiveBlending
+            });
+            
+            // Create mesh
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            // Add lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+            scene.add(ambientLight);
+            
+            const pointLight = new THREE.PointLight(0x10b981, 1);
+            pointLight.position.set(20, 20, 20);
+            scene.add(pointLight);
+            
+            // Mouse interaction
+            let mouseX = 0;
+            let mouseY = 0;
+            
+            document.addEventListener('mousemove', (event) => {
+                mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            });
+            
+            // Animation loop
+            let time = 0;
+            
+            function animate() {
+                requestAnimationFrame(animate);
+                time += 0.002;
+                
+                // Rotate particles slowly
+                particlesMesh.rotation.x = time * 0.1;
+                particlesMesh.rotation.y = time * 0.15;
+                
+                // Mouse interaction - particles follow mouse
+                particlesMesh.rotation.y += mouseX * 0.003;
+                particlesMesh.rotation.x += mouseY * 0.003;
+                
+                // Gentle pulsing effect
+                particlesMaterial.size = 0.08 + Math.sin(time * 3) * 0.02;
+                
+                // Move particles in wave pattern
+                const positions = particlesGeometry.attributes.position.array;
+                for (let i = 0; i < positions.length; i += 3) {
+                    const originalX = positions[i];
+                    const originalY = positions[i + 1];
+                    const originalZ = positions[i + 2];
+                    
+                    positions[i] = originalX + Math.sin(time + originalY * 0.1) * 0.2;
+                    positions[i + 1] = originalY + Math.cos(time + originalZ * 0.1) * 0.2;
+                }
+                particlesGeometry.attributes.position.needsUpdate = true;
+                
+                // Move camera in circular pattern
+                camera.position.x = Math.sin(time * 0.2) * 10;
+                camera.position.z = 25 + Math.cos(time * 0.2) * 5;
+                camera.lookAt(scene.position);
+                
+                renderer.render(scene, camera);
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Start animation
+            animate();
+            
+            // Performance optimization for mobile
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                particlesMaterial.size = 0.05;
+                particlesMaterial.opacity = 0.4;
+            }
+        }
+        
+        // Contact Form Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize particle animation
+            initContactParticleAnimation();
+            
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Basic validation
+                    if (!data.name || !data.email || !data.phone || !data.message) {
+                        alert('Please fill all required fields');
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const submitBtn = contactForm.querySelector('.btn-submit');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    try {
+                        // Simulate API call
+                        await new Promise(resolve => setTimeout(resolve, 1500));
+                        
+                        // Show success message
+                        successMessage.style.display = 'block';
+                        contactForm.style.display = 'none';
+                        
+                        // Reset form
+                        contactForm.reset();
+                        
+                        // Scroll to success message
+                        successMessage.scrollIntoView({ behavior: 'smooth' });
+                        
+                        // Send to analytics if available
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'contact_form_submit', {
+                                'event_category': 'Contact',
+                                'event_label': 'Contact Page'
+                            });
+                        }
+                        
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        alert('There was an error sending your message. Please try again or contact us via WhatsApp.');
+                    } finally {
+                        // Reset button
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }
+                });
+            }
+            
+            // Phone number formatting
+            const phoneInput = document.getElementById('contactPhone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    
+                    if (value.length > 10) {
+                        value = value.slice(0, 10);
+                    }
+                    
+                    if (value.length > 6) {
+                        value = value.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+                    } else if (value.length > 3) {
+                        value = value.replace(/(\d{3})(\d{1,3})/, '$1-$2');
+                    }
+                    
+                    e.target.value = value;
+                });
+            }
+            
+            // Form label animation
+            const formInputs = contactForm.querySelectorAll('input, select, textarea');
+            formInputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    const label = this.nextElementSibling;
+                    if (label && label.classList.contains('form-label')) {
+                        label.style.color = 'var(--primary-color)';
+                    }
+                });
+                
+                input.addEventListener('blur', function() {
+                    const label = this.nextElementSibling;
+                    if (label && label.classList.contains('form-label')) {
+                        label.style.color = 'var(--text-light)';
+                    }
+                });
+            });
+            
+            // Mark body as loaded
+            window.addEventListener('load', function() {
+                document.body.classList.remove('loading');
+                document.body.classList.add('loaded');
+            });
+        });
+    </script>
+</body>
+</html>

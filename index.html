@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="NextGen Web Solutions - Professional Website Development Company serving all India. Get custom websites, e-commerce stores, and web applications with lifetime support.">
+    <meta name="keywords" content="website development India, web development company, website designer, ecommerce website, custom website, business website, professional web design, Flask development, Python web development">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="NextGen Web Solutions | Professional Website Development Company India">
+    <meta property="og:description" content="Professional Website Development Services Across India. Serving businesses in all major cities with custom solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextgenwebsolutions.in">
+    <meta property="og:image" content="https://nextgenwebsolutions.in/assets/images/og-image.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NextGen Web Solutions - India's Website Development Experts">
+    <meta name="twitter:description" content="Serving 500+ Clients Across India | Professional Website Development">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextgenwebsolutions.in">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "NextGen Web Solutions",
+      "description": "Professional Website Development Company serving clients across India",
+      "url": "https://nextgenwebsolutions.in",
+      "logo": "https://nextgenwebsolutions.in/assets/images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Faridabad",
+        "addressRegion": "Haryana",
+        "postalCode": "121008",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.4089,
+        "longitude": 77.3178
+      },
+      "serviceArea": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "telephone": "+919599372553",
+      "email": "akashsing1553@gmail.com",
+      "openingHours": "Mo-Su 09:00-21:00",
+      "priceRange": "₹₹",
+      "sameAs": [
+        "https://www.facebook.com/nextgenwebsolutions",
+        "https://twitter.com/nextgenwebsols",
+        "https://www.linkedin.com/company/nextgenwebsolutions"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you provide website development services across all India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We provide professional website development services to clients across all of India. Based in Faridabad, we serve businesses in Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Kolkata, and every other city through remote collaboration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a business website cost in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our professional business websites start at just ₹4,999 for a 5-page responsive website. E-commerce websites start at ₹19,999, and custom applications start at ₹45,000. We offer transparent pricing with no hidden costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does website development take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard business websites take 5-7 business days. E-commerce websites typically take 10-15 days. Complex custom applications may take 3-4 weeks. We provide a clear timeline during our free consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide website maintenance and support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! All our packages include at least 1 year of free support. We offer lifetime support options including security updates, backups, performance optimization, and content updates. Our WhatsApp support is available for quick queries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What technologies do you use for website development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use modern technologies including HTML5, CSS3, JavaScript, Python Flask for backend, PostgreSQL/MySQL databases, and responsive frameworks. For e-commerce, we implement secure payment gateways like Razorpay, PayU, and Paytm."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <title>NextGen Web Solutions | Professional Website Development Company India</title>
+    
+    <!-- Critical CSS (inline for performance) -->
+    <style>
+        /* Critical above-the-fold CSS */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--bg-color);
+            transition: transform 0.3s ease;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+        
+        .header.hidden {
+            transform: translateY(-100%);
+        }
+        
+        /* Performance optimizations */
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+        
+        /* Ensure proper scrolling */
+        html {
+            height: 100%;
+            overflow-x: hidden;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Loading state */
+        .loading {
+            opacity: 0;
+        }
+        
+        .loaded {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Particle canvas styles */
+        #home-particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: transparent;
+        }
+        
+        /* Ensure content stays above particles */
+        .hero, .services, .why-choose, .pricing, .portfolio, .contact, .cities, .footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="loading">
+    
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919599372553?text=Hi%20NextGen%20Web%20Solutions,%20I%20need%20website%20development%20services%20for%20my%20business" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener nofollow"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Particle Canvas -->
+    <canvas id="home-particle-canvas"></canvas>
+
+    <!-- Header -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>NextGen Web Solutions</h1>
+                    <span class="logo-subtitle">Professional Website Development</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services-india.html" class="nav-link">Services</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="portfolio-india.html" class="nav-link">Portfolio</a>
+                    <a href="contact-india.html" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>Serving 500+ Clients Across India</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Professional <span class="highlight">Website Development</span> for Indian Businesses
+                    </h1>
+                    <p class="hero-subtitle">
+                        We build fast, secure, and scalable websites that help businesses grow online. 
+                        Serving Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Kolkata & 50+ cities.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="https://wa.me/919599372553?text=Hi%20NextGen,%20I%20need%20a%20website%20for%20my%20business.%20Can%20we%20discuss?" 
+                           class="btn btn-primary btn-large">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Free Consultation
+                        </a>
+                        <a href="tel:+919599372553" class="btn btn-secondary btn-large">
+                            <i class="fas fa-phone"></i> Call +91 95993 72553
+                        </a>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <span>Fast Delivery (5-7 Days)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure & Optimized</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <span>Lifetime Support</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span>Transparent Pricing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Professional Services</h2>
+                    <p class="section-subtitle">Custom solutions for businesses across India</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="service-title">Business Website Development</h3>
+                        <p class="service-description">
+                            Professional, responsive websites designed to convert visitors into customers. 
+                            Perfect for startups, SMEs, and established businesses across India.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 5+ Responsive Pages</li>
+                            <li><i class="fas fa-check"></i> SEO Optimized</li>
+                            <li><i class="fas fa-check"></i> Contact Forms</li>
+                            <li><i class="fas fa-check"></i> Social Media Integration</li>
+                        </ul>
+                        <div class="service-price">Starting at ₹4,999</div>
+                        <a href="contact-india.html" class="btn btn-service">Get Quote</a>
+                    </div>
+                    
+                    <div class="service-card featured">
+                        <div class="service-badge">Most Popular</div>
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="service-title">E-commerce Solutions</h3>
+                        <p class="service-description">
+                            Complete online stores with Indian payment gateways, inventory management, 
+                            and order tracking. GST compliant with multiple payment options.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Razorpay/Paytm Integration</li>
+                            <li><i class="fas fa-check"></i> Product Management</li>
+                            <li><i class="fas fa-check"></i> Order Tracking System</li>
+                            <li><i class="fas fa-check"></i> GST Invoice Generation</li>
+                        </ul>
+                        <div class="service-price">Starting at ₹19,999</div>
+                        <a href="contact-india.html" class="btn btn-service">Get Quote</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="service-title">Custom Web Applications</h3>
+                        <p class="service-description">
+                            Scalable web applications built with Flask/Python. Perfect for businesses 
+                            needing custom solutions, dashboards, or internal management systems.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Python Flask Development</li>
+                            <li><i class="fas fa-check"></i> Database Integration</li>
+                            <li><i class="fas fa-check"></i> User Authentication</li>
+                            <li><i class="fas fa-check"></i> API Development</li>
+                        </ul>
+                        <div class="service-price">Starting at ₹45,000</div>
+                        <a href="contact-india.html" class="btn btn-service">Get Quote</a>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="services-india.html" class="btn btn-secondary">
+                        View All Services <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose NextGen Web Solutions</h2>
+                    <p class="section-subtitle">What makes us the preferred choice for businesses across India</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>We deliver websites in 5-7 days without compromising quality. Quick turnaround for urgent projects.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile First</h3>
+                        <p>All websites are optimized for mobile devices first, ensuring perfect experience on all screens.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>SEO Ready</h3>
+                        <p>Built with SEO best practices from day one. Fast loading, clean code, and optimized structure.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure & Scalable</h3>
+                        <p>Enterprise-grade security with regular updates. Scalable architecture for future growth.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock support via WhatsApp, email, and phone. Quick resolution of issues.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden costs. Clear pricing with detailed breakdown. Multiple payment options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Simple & Transparent Pricing</h2>
+                    <p class="section-subtitle">Choose the perfect plan for your business needs</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>Basic Business Website</h3>
+                            <div class="price-amount">
+                                <span class="currency">₹</span>
+                                <span class="amount">4,999</span>
+                                <span class="period">one-time</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> 5 Responsive Pages</li>
+                            <li><i class="fas fa-check"></i> Contact Form</li>
+                            <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                            <li><i class="fas fa-check"></i> Social Media Integration</li>
+                            <li><i class="fas fa-check"></i> WhatsApp Integration</li>
+                            <li><i class="fas fa-check"></i> 1 Year Free Support</li>
+                            <li><i class="fas fa-times"></i> Admin Panel</li>
+                            <li><i class="fas fa-times"></i> E-commerce Features</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/919599372553?text=I'm%20interested%20in%20Basic%20Business%20Website%20package%20(₹4,999)" 
+                           class="btn btn-price">
+                            Choose This Plan
+                        </a>
+                    </div>
+                    
+                    <div class="price-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="price-header">
+                            <h3>Website + Admin Panel</h3>
+                            <div class="price-amount">
+                                <span class="currency">₹</span>
+                                <span class="amount">12,500</span>
+                                <span class="period">one-time</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Everything in Basic</li>
+                            <li><i class="fas fa-check"></i> Custom Admin Panel</li>
+                            <li><i class="fas fa-check"></i> Content Management System</li>
+                            <li><i class="fas fa-check"></i> User Authentication</li>
+                            <li><i class="fas fa-check"></i> Database Integration</li>
+                            <li><i class="fas fa-check"></i> Basic Analytics</li>
+                            <li><i class="fas fa-check"></i> Lifetime Support</li>
+                            <li><i class="fas fa-times"></i> E-commerce Features</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/919599372553?text=I'm%20interested%20in%20Website%20+%20Admin%20Panel%20package%20(₹12,500)" 
+                           class="btn btn-price">
+                            Choose This Plan
+                        </a>
+                    </div>
+                    
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>E-commerce Website</h3>
+                            <div class="price-amount">
+                                <span class="currency">₹</span>
+                                <span class="amount">19,999</span>
+                                <span class="period">one-time</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Everything in Popular</li>
+                            <li><i class="fas fa-check"></i> Product Management</li>
+                            <li><i class="fas fa-check"></i> Shopping Cart</li>
+                            <li><i class="fas fa-check"></i> Payment Gateway (Razorpay/Paytm)</li>
+                            <li><i class="fas fa-check"></i> Order Management</li>
+                            <li><i class="fas fa-check"></i> Inventory System</li>
+                            <li><i class="fas fa-check"></i> GST Invoice Generation</li>
+                            <li><i class="fas fa-check"></i> Priority Support</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/919599372553?text=I'm%20interested%20in%20E-commerce%20Website%20package%20(₹19,999)" 
+                           class="btn btn-price">
+                            Choose This Plan
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="pricing-note">
+                    <p><i class="fas fa-info-circle"></i> All prices are one-time payment. Additional pages: ₹800/page. Custom requirements quoted separately. 50% advance to start work.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Recent Work</h2>
+                    <p class="section-subtitle">Projects delivered for clients across India</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Business Website - Delhi</h3>
+                            <p>Complete corporate website with admin panel for a manufacturing company in Delhi.</p>
+                            <div class="portfolio-tech">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Flask</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-store"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>E-commerce Store - Mumbai</h3>
+                            <p>Online fashion store with Razorpay integration and inventory management.</p>
+                            <div class="portfolio-tech">
+                                <span>E-commerce</span>
+                                <span>Payment Gateway</span>
+                                <span>Inventory</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Admin Dashboard - Bangalore</h3>
+                            <p>Custom admin dashboard with analytics for a SaaS startup in Bangalore.</p>
+                            <div class="portfolio-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>Charts.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="portfolio-india.html" class="btn btn-secondary">
+                        View Full Portfolio <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Ready to Start Your Project?</h2>
+                    <p class="section-subtitle">Get your free consultation and quote today</p>
+                </div>
+                
+                <div class="contact-cta">
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon-large">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h3>WhatsApp Consultation</h3>
+                            <p>Fastest response within minutes</p>
+                            <a href="https://wa.me/919599372553" class="btn btn-primary">
+                                <i class="fab fa-whatsapp"></i> Chat Now
+                            </a>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon-large">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Phone Call</h3>
+                            <p>Speak directly with our team</p>
+                            <a href="tel:+919599372553" class="btn btn-secondary">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon-large">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                            <p>Detailed project inquiries</p>
+                            <a href="mailto:akashsing1553@gmail.com" class="btn btn-secondary">
+                                <i class="fas fa-envelope"></i> Send Email
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center" style="margin-top: 3rem;">
+                        <a href="contact-india.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-file-alt"></i> Get Detailed Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cities We Serve -->
+        <section class="cities">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">We Serve Businesses Across India</h2>
+                    <p class="section-subtitle">Professional website development services available in all major cities</p>
+                </div>
+                
+                <div class="cities-grid">
+                    <a href="cities/delhi.html" class="city-card">
+                        <i class="fas fa-landmark"></i>
+                        <h3>Delhi NCR</h3>
+                        <p>Website development services in Delhi, Gurgaon, Noida, Faridabad</p>
+                    </a>
+                    
+                    <a href="cities/mumbai.html" class="city-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Mumbai</h3>
+                        <p>Professional websites for Mumbai businesses and startups</p>
+                    </a>
+                    
+                    <a href="cities/bangalore.html" class="city-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Bangalore</h3>
+                        <p>Tech solutions for Bangalore's IT companies and startups</p>
+                    </a>
+                    
+                    <a href="cities/chennai.html" class="city-card">
+                        <i class="fas fa-industry"></i>
+                        <h3>Chennai</h3>
+                        <p>Website services for Chennai's manufacturing and service industries</p>
+                    </a>
+                    
+                    <a href="cities/hyderabad.html" class="city-card">
+                        <i class="fas fa-gem"></i>
+                        <h3>Hyderabad</h3>
+                        <p>Web solutions for Hyderabad's IT and pharmaceutical companies</p>
+                    </a>
+                    
+                    <a href="cities/kolkata.html" class="city-card">
+                        <i class="fas fa-university"></i>
+                        <h3>Kolkata</h3>
+                        <p>Website development for Kolkata's traditional businesses</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>NextGen Web Solutions</h3>
+                        <p>Professional Website Development Services Across India</p>
+                    </div>
+                    <p class="footer-about">
+                        We help businesses across India establish their online presence with professional, 
+                        fast, and secure websites. Serving clients in all major cities with custom solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919599372553" class="social-link whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" class="social-link facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-link twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-link instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services-india.html">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="portfolio-india.html">Portfolio</a></li>
+                        <li><a href="contact-india.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services-india.html#website">Business Website Development</a></li>
+                        <li><a href="services-india.html#ecommerce">E-commerce Solutions</a></li>
+                        <li><a href="services-india.html#custom">Custom Web Applications</a></li>
+                        <li><a href="services-india.html#maintenance">Website Maintenance</a></li>
+                        <li><a href="services-india.html#seo">SEO Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+919599372553">+91 95993 72553</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:akashsing1553@gmail.com">akashsing1553@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sector 28, Faridabad, Haryana 121008</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sun: 9:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> NextGen Web Solutions. All rights reserved.</p>
+                    <p>Professional Website Development Services for Businesses Across India</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>NextGen Assistant</h3>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <!-- Messages will be added here -->
+            </div>
+            <div class="chatbot-options">
+                <button class="option-btn" data-option="Services">Our Services</button>
+                <button class="option-btn" data-option="Pricing">Pricing Details</button>
+                <button class="option-btn" data-option="Contact">Contact Info</button>
+                <button class="option-btn" data-option="Timeline">Project Timeline</button>
+                <button class="whatsapp-redirect" id="whatsappRedirect">
+                    <i class="fab fa-whatsapp"></i> Talk to Human
+                </button>
+            </div>
+        </div>
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your quote request has been submitted successfully. We'll contact you within 24 hours.</p>
+            <button class="btn btn-primary" id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Inline script for critical functionality -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mark body as loaded
+        window.addEventListener('load', function() {
+            document.body.classList.remove('loading');
+            document.body.classList.add('loaded');
+            console.log('NextGen Web Solutions - Page fully loaded');
+        });
+        
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                if (perfData) {
+                    const loadTime = perfData.loadEventEnd - perfData.startTime;
+                    console.log('Page load time:', Math.round(loadTime), 'ms');
+                    
+                    // Send to analytics if available
+                    if (typeof gtag !== 'undefined' && loadTime < 2500) {
+                        gtag('event', 'page_load_time', {
+                            'event_category': 'Performance',
+                            'event_label': 'Good',
+                            'value': Math.round(loadTime)
+                        });
+                    }
+                }
+            });
+        }
+
+        // Three.js Animation for Home Page
+        function initHomeParticles() {
+            if (typeof THREE === 'undefined') return;
+            
+            const canvas = document.getElementById('home-particle-canvas');
+            if (!canvas) return;
+            
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 40;
+            
+            const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            
+            // Create floating particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 1000;
+            const posArray = new Float32Array(particlesCount * 3);
+            const colorsArray = new Float32Array(particlesCount * 3);
+            
+            const colors = [
+                new THREE.Color(0x2563eb), // Blue
+                new THREE.Color(0x8b5cf6), // Purple
+                new THREE.Color(0x10b981), // Green
+                new THREE.Color(0xf59e0b)  // Amber
+            ];
+            
+            for (let i = 0; i < particlesCount * 3; i += 3) {
+                posArray[i] = (Math.random() - 0.5) * 80;
+                posArray[i + 1] = (Math.random() - 0.5) * 80;
+                posArray[i + 2] = (Math.random() - 0.5) * 80;
+                
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                colorsArray[i] = color.r;
+                colorsArray[i + 1] = color.g;
+                colorsArray[i + 2] = color.b;
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorsArray, 3));
+            
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.15,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.8,
+                blending: THREE.AdditiveBlending
+            });
+            
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            // Add ambient light
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+            
+            // Mouse interaction
+            let mouseX = 0;
+            let mouseY = 0;
+            
+            document.addEventListener('mousemove', (event) => {
+                mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            });
+            
+            // Animation loop
+            let time = 0;
+            
+            function animate() {
+                requestAnimationFrame(animate);
+                time += 0.001;
+                
+                // Rotate particles
+                particlesMesh.rotation.x = time * 0.1;
+                particlesMesh.rotation.y = time * 0.2;
+                
+                // Mouse interaction
+                particlesMesh.rotation.y += mouseX * 0.01;
+                particlesMesh.rotation.x += mouseY * 0.01;
+                
+                // Gentle pulsing
+                particlesMaterial.size = 0.15 + Math.sin(time * 2) * 0.05;
+                
+                // Move camera slightly
+                camera.position.x = Math.sin(time * 0.3) * 3;
+                camera.position.y = Math.cos(time * 0.2) * 2;
+                
+                renderer.render(scene, camera);
+            }
+            
+            // Handle resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Start animation
+            animate();
+        }
+
+        // Initialize when page loads
+        window.addEventListener('load', function() {
+            // Initialize Three.js after a short delay
+            setTimeout(initHomeParticles, 500);
+        });
+    </script>
+</body>
+</html>

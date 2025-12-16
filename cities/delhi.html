@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development Company Delhi | NextGen Web Solutions</title>
+    <meta name="description" content="Professional website development services in Delhi NCR. Custom websites, e-commerce stores, and web applications for Delhi businesses.">
+    <meta name="keywords" content="website development Delhi, web design Delhi, ecommerce development Delhi, website company Delhi, digital agency Delhi">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Website Development Company Delhi | NextGen Web Solutions">
+    <meta property="og:description" content="Professional website development services for businesses in Delhi, Gurgaon, Noida, Faridabad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextgenwebsolutions.in/cities/delhi.html">
+    <meta property="og:image" content="https://nextgenwebsolutions.in/assets/images/og-image.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nextgenwebsolutions.in/cities/delhi.html">
+    
+    <!-- External Resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="../../favicon.ico">
+    
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "NextGen Web Solutions - Delhi",
+      "description": "Professional website development services in Delhi NCR",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delhi NCR",
+        "addressRegion": "Delhi",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.6139,
+        "longitude": 77.2090
+      },
+      "openingHours": "Mo-Su 09:00-21:00",
+      "telephone": "+919599372553"
+    }
+    </script>
+    
+    <style>
+        .city-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            margin-top: 70px;
+            text-align: center;
+        }
+        
+        .city-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .city-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .areas-served {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .area-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .city-stats {
+            background: var(--bg-light);
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        
+        .industry-solutions {
+            margin: 4rem 0;
+        }
+        
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .industry-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .industry-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-section {
+            background: var(--bg-dark);
+            padding: 4rem 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-color);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        
+        .client-name {
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        .client-company {
+            color: var(--primary-color);
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            .city-hero {
+                padding: 6rem 0 3rem;
+            }
+            
+            .city-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="loading">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919599372553?text=Hi%20NextGen,%20I%20need%20website%20development%20services%20in%20Delhi" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../../index.html">
+                        <h1>NextGen Web Solutions</h1>
+                        <span class="logo-subtitle">Professional Website Development</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="../../index.html" class="nav-link">Home</a>
+                    <a href="../../services-india.html" class="nav-link">Services</a>
+                    <a href="../../index.html#pricing" class="nav-link">Pricing</a>
+                    <a href="../../portfolio-india.html" class="nav-link">Portfolio</a>
+                    <a href="../../contact-india.html" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- City Hero -->
+    <section class="city-hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span>Delhi NCR Services</span>
+            </div>
+            <h1>Website Development Services in Delhi</h1>
+            <p>
+                Professional website solutions for businesses in Delhi, Gurgaon, Noida, Faridabad, 
+                and surrounding areas. Serving Delhi NCR businesses since 2020.
+            </p>
+            
+            <div class="areas-served">
+                <div class="area-card">Delhi</div>
+                <div class="area-card">Gurgaon</div>
+                <div class="area-card">Noida</div>
+                <div class="area-card">Faridabad</div>
+                <div class="area-card">Ghaziabad</div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="https://wa.me/919599372553?text=Hi%20NextGen,%20I%20need%20website%20services%20in%20Delhi" 
+                   class="btn btn-primary btn-large">
+                    <i class="fab fa-whatsapp"></i> WhatsApp for Delhi Clients
+                </a>
+                <a href="tel:+919599372553" class="btn btn-secondary btn-large">
+                    <i class="fas fa-phone"></i> Call Delhi Office
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- City Stats -->
+    <section class="city-stats">
+        <div class="container">
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Delhi Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Local Support</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1-2 Days</div>
+                    <div class="stat-label">Site Visit Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services for Delhi -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">Website Services for Delhi Businesses</h2>
+            <p class="section-subtitle">Custom solutions for Delhi's diverse business landscape</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Corporate Website Development</h3>
+                <p>Professional websites for Delhi's corporate offices, manufacturing units, and service companies.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Multi-page Corporate Sites</li>
+                    <li><i class="fas fa-check"></i> Team & Portfolio Sections</li>
+                    <li><i class="fas fa-check"></i> Case Studies & Testimonials</li>
+                    <li><i class="fas fa-check"></i> Investor Relations Pages</li>
+                </ul>
+                <a href="../../contact-india.html" class="btn btn-service">Get Delhi Quote</a>
+            </div>
+            
+            <div class="service-card featured">
+                <div class="service-badge">Popular in Delhi</div>
+                <div class="service-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>Delhi Retail E-commerce</h3>
+                <p>Online stores for Delhi's retail businesses with local delivery and pickup options.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Local Payment Gateways</li>
+                    <li><i class="fas fa-check"></i> Delhi Delivery Zones</li>
+                    <li><i class="fas fa-check"></i> Multi-language Support</li>
+                    <li><i class="fas fa-check"></i> GST Compliant Invoices</li>
+                </ul>
+                <a href="../../contact-india.html" class="btn btn-service">Get Delhi Quote</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education Institute Websites</h3>
+                <p>Websites for Delhi's schools, colleges, coaching centers, and training institutes.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Student Portals</li>
+                    <li><i class="fas fa-check"></i> Admission Forms</li>
+                    <li><i class="fas fa-check"></i> Faculty Management</li>
+                    <li><i class="fas fa-check"></i> Event Calendars</li>
+                </ul>
+                <a href="../../contact-india.html" class="btn btn-service">Get Delhi Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="industry-solutions container">
+        <div class="section-header">
+            <h2 class="section-title">Industry-Specific Solutions for Delhi</h2>
+            <p class="section-subtitle">Tailored websites for Delhi's major industries</p>
+        </div>
+        
+        <div class="industry-grid">
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Manufacturing</h3>
+                <p>Websites for Delhi's manufacturing units in Okhla, Noida, and Faridabad industrial areas.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <h3>Retail & Fashion</h3>
+                <p>E-commerce solutions for Delhi's retail stores and fashion boutiques.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Restaurants & Food</h3>
+                <p>Online ordering systems for Delhi's restaurants and food businesses.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Healthcare</h3>
+                <p>Websites for Delhi's hospitals, clinics, and healthcare providers.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Real Estate</h3>
+                <p>Property listing websites for Delhi's real estate developers and brokers.</p>
+            </div>
+            
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education</h3>
+                <p>Educational institute websites and learning management systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Delhi Clients Say</h2>
+                <p class="section-subtitle">Success stories from businesses across Delhi NCR</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"NextGen built our corporate website in just 7 days. The team was professional and understood exactly what we needed for our manufacturing business in Faridabad."</p>
+                    <div class="client-name">Rajesh Kumar</div>
+                    <div class="client-company">Manufacturing Company, Faridabad</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"Our e-commerce store for fashion accessories was delivered on time and within budget. The payment gateway integration works perfectly for Delhi customers."</p>
+                    <div class="client-name">Priya Sharma</div>
+                    <div class="client-company">Fashion Boutique, South Delhi</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"The website for our coaching center in Noida has helped us increase admissions by 40%. The student portal feature is particularly useful."</p>
+                    <div class="client-name">Dr. Amit Verma</div>
+                    <div class="client-company">Educational Institute, Noida</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container" style="margin: 4rem auto; text-align: center;">
+        <h2>Need a Website for Your Delhi Business?</h2>
+        <p style="margin-bottom: 2rem;">Get a free consultation and quote for your Delhi-based business.</p>
+        <div class="hero-cta">
+            <a href="https://wa.me/919599372553?text=Hi%20NextGen,%20I%20have%20a%20business%20in%20Delhi%20and%20need%20a%20website" 
+               class="btn btn-primary btn-large">
+                <i class="fab fa-whatsapp"></i> WhatsApp Delhi Team
+            </a>
+            <a href="tel:+919599372553" class="btn btn-secondary btn-large">
+                <i class="fas fa-phone"></i> Call Delhi: +91 95993 72553
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>NextGen Web Solutions</h3>
+                        <p>Website Development Services in Delhi</p>
+                    </div>
+                    <p class="footer-about">
+                        Serving Delhi NCR businesses with professional website solutions since 2020.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919599372553" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-link twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Delhi Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#corporate">Corporate Websites</a></li>
+                        <li><a href="#ecommerce">E-commerce Stores</a></li>
+                        <li><a href="#education">Education Websites</a></li>
+                        <li><a href="#restaurant">Restaurant Websites</a></li>
+                        <li><a href="#realestate">Real Estate Websites</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Delhi Areas</h4>
+                    <ul class="footer-links">
+                        <li>South Delhi</li>
+                        <li>North Delhi</li>
+                        <li>West Delhi</li>
+                        <li>East Delhi</li>
+                        <li>Central Delhi</li>
+                        <li>Gurgaon</li>
+                        <li>Noida</li>
+                        <li>Faridabad</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Delhi Office</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+919599372553">+91 95993 72553</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:akashsing1553@gmail.com">akashsing1553@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Serving Delhi NCR</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sun: 9 AM - 9 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> NextGen Web Solutions - Delhi. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="../../privacy.html">Privacy</a>
+                    <a href="../../terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js" defer></script>
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mark body as loaded
+        window.addEventListener('load', () => {
+            document.body.classList.remove('loading');
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

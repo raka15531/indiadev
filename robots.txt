@@ -1,0 +1,84 @@
+# NextGen Web Solutions - Robots.txt
+# Last Updated: 2025-12-16
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /services-india.html
+Allow: /portfolio-india.html
+Allow: /blog-india.html
+Allow: /about-india.html
+Allow: /contact-india.html
+Allow: /cities/
+Allow: /industries/
+
+# Crawl delay (requests per second)
+Crawl-delay: 2
+
+# Sitemap location
+Sitemap: https://nextgenwebsolutions.in/sitemap.xml
+
+# Disallow dynamic URLs
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /?*
+
+# Allow social media crawlers
+User-agent: Twitterbot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+# Allow Google AdsBot
+User-agent: AdsBot-Google
+Allow: /
+Crawl-delay: 1
+
+# Allow Bing AdsBot
+User-agent: BingPreview
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Image and asset access
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /images/
+Crawl-delay: 1
+
+# Development and staging
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /test/
+Disallow: /beta/
+
+# Security
+Disallow: /config/
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /phpmyadmin/
+Disallow: /phpMyAdmin/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /wp-config.php
+Disallow: /error_log

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NextGen Web Solutions | Website Development Company India</title>
+    <meta name="description" content="Learn about NextGen Web Solutions - Professional website development company serving 500+ clients across India. Our mission, team, and values.">
+    <meta name="keywords" content="about us, web development company India, our team, company mission, values, experience">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About NextGen Web Solutions | Website Development Experts India">
+    <meta property="og:description" content="Professional website development company with 500+ satisfied clients across India. Learn about our team and mission.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextgenwebsolutions.in/about-india.html">
+    <meta property="og:image" content="https://nextgenwebsolutions.in/assets/images/og-image.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nextgenwebsolutions.in/about-india.html">
+    
+    <!-- External Resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About NextGen Web Solutions",
+      "description": "Professional website development company serving clients across India",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NextGen Web Solutions",
+        "founder": "Akash Singh",
+        "foundingDate": "2020",
+        "numberOfEmployees": "10",
+        "slogan": "Professional Website Development"
+      }
+    }
+    </script>
+    
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-color) 100%);
+            padding: 8rem 0 4rem;
+            margin-top: 70px;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .mission-card, .vision-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .mission-icon, .vision-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .team-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .member-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-role {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-content {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: auto;
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+            }
+            
+            .timeline-year {
+                left: 30px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="loading">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919599372553" class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>NextGen Web Solutions</h1>
+                        <span class="logo-subtitle">Professional Website Development</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services-india.html" class="nav-link">Services</a>
+                    <a href="index.html#pricing" class="nav-link">Pricing</a>
+                    <a href="portfolio-india.html" class="nav-link">Portfolio</a>
+                    <a href="about-india.html" class="nav-link active">About</a>
+                    <a href="contact-india.html" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-content">
+                <div class="hero-badge">
+                    <span>Established 2020</span>
+                </div>
+                <h1 class="hero-title">About NextGen Web Solutions</h1>
+                <p class="hero-subtitle">
+                    We are a professional website development company based in Faridabad, serving businesses 
+                    across India with cutting-edge web solutions. With 500+ successful projects, we've helped 
+                    businesses establish and grow their online presence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision container">
+        <div class="mission-card">
+            <div class="mission-icon">
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <h2>Our Mission</h2>
+            <p>
+                To empower Indian businesses with professional, affordable, and effective website solutions 
+                that drive growth and establish strong online presence. We aim to make quality web development 
+                accessible to businesses of all sizes across India.
+            </p>
+        </div>
+        
+        <div class="vision-card">
+            <div class="vision-icon">
+                <i class="fas fa-eye"></i>
+            </div>
+            <h2>Our Vision</h2>
+            <p>
+                To become India's most trusted website development partner, known for innovation, 
+                reliability, and exceptional client service. We envision a digital India where every 
+                business has a professional online presence.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Story</h2>
+            <p class="section-subtitle">From humble beginnings to serving 500+ clients across India</p>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h3>Founded in Faridabad</h3>
+                    <p>Started as a small web development studio with focus on local businesses in Delhi NCR.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-content">
+                    <h3>Expanded Services</h3>
+                    <p>Added e-commerce solutions and custom web applications to our service portfolio.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2022</div>
+                <div class="timeline-content">
+                    <h3>National Reach</h3>
+                    <p>Started serving clients across India with remote collaboration and delivery model.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-content">
+                    <h3>Team Expansion</h3>
+                    <p>Grew to a team of 10+ developers and designers serving 300+ clients.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h3>500+ Projects</h3>
+                    <p>Milestone achievement of delivering 500+ successful projects across India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="section-subtitle">Principles that guide everything we do</p>
+        </div>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Client First</h3>
+                <p>We prioritize client satisfaction above everything else, building long-term relationships.</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Innovation</h3>
+                <p>Constantly learning and adopting new technologies to deliver cutting-edge solutions.</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Quality</h3>
+                <p>Commitment to delivering high-quality work that exceeds client expectations.</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Timely Delivery</h3>
+                <p>We respect deadlines and deliver projects on time, every time.</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-rupee-sign"></i>
+                </div>
+                <h3>Transparency</h3>
+                <p>Clear communication and honest pricing with no hidden costs.</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Support</h3>
+                <p>Round-the-clock support to ensure our clients' success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Founder</h2>
+                <p class="section-subtitle">The vision behind NextGen Web Solutions</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="member-photo">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-name">Akash Singh</div>
+                <div class="member-role">Founder & Lead Developer</div>
+                <p>
+                    With over 5 years of experience in web development, Akash started NextGen Web Solutions 
+                    with a vision to provide affordable yet professional website solutions to Indian businesses. 
+                    His expertise spans across front-end development, Python Flask, and e-commerce solutions.
+                </p>
+                <div class="contact-info" style="margin-top: 1rem;">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+919599372553">+91 95993 72553</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:akashsing1553@gmail.com">akashsing1553@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Achievements</h2>
+            <p class="section-subtitle">Numbers that speak for themselves</p>
+        </div>
+        
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Cities Served</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support Available</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container" style="margin: 4rem auto; text-align: center;">
+        <h2>Ready to Work With Us?</h2>
+        <p style="margin-bottom: 2rem;">Let's discuss how we can help grow your business online.</p>
+        <div class="hero-cta">
+            <a href="https://wa.me/919599372553" class="btn btn-primary btn-large">
+                <i class="fab fa-whatsapp"></i> WhatsApp Consultation
+            </a>
+            <a href="contact-india.html" class="btn btn-secondary btn-large">
+                <i class="fas fa-envelope"></i> Send Message
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>NextGen Web Solutions</h3>
+                        <p>Professional Website Development Services Across India</p>
+                    </div>
+                    <p class="footer-about">
+                        Empowering Indian businesses with professional web solutions since 2020.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919599372553" class="social-link whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" class="social-link facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-link twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services-india.html">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="portfolio-india.html">Portfolio</a></li>
+                        <li><a href="about-india.html">About</a></li>
+                        <li><a href="contact-india.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services-india.html#website">Business Websites</a></li>
+                        <li><a href="services-india.html#ecommerce">E-commerce Solutions</a></li>
+                        <li><a href="services-india.html#custom">Custom Applications</a></li>
+                        <li><a href="services-india.html#seo">SEO Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+919599372553">+91 95993 72553</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:akashsing1553@gmail.com">akashsing1553@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Faridabad, Haryana</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sun: 9 AM - 9 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> NextGen Web Solutions. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="refund.html">Refund</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>NextGen Assistant</h3>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <!-- Messages will be added here -->
+            </div>
+            <div class="chatbot-options">
+                <button class="option-btn" data-option="Services">Our Services</button>
+                <button class="option-btn" data-option="Pricing">Pricing Details</button>
+                <button class="option-btn" data-option="Contact">Contact Info</button>
+                <button class="whatsapp-redirect" id="whatsappRedirect">
+                    <i class="fab fa-whatsapp"></i> Talk to Human
+                </button>
+            </div>
+        </div>
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mark body as loaded
+        window.addEventListener('load', () => {
+            document.body.classList.remove('loading');
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
